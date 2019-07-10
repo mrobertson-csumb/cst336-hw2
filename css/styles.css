@@ -1,0 +1,61 @@
+fieldset {
+    display: table;
+}
+
+.form-field {
+    display: table-row;
+}
+
+.form-field {
+    display: table-cell;
+    padding: 3px 10px;
+}
+
+.text-monospace {
+    font-family: monospace;
+}
+
+[data-tip] {
+    position: relative;
+}
+
+
+#csumb_logo {
+    width: 35%;
+}
+
+[data-tip]:before {
+    /* hides the tooltip when not hovered */
+    content: '';
+    display: none;
+    border-left: 0 solid transparent;
+    border-right: 0 solid transparent;
+    border-bottom: 0 solid transparent;
+    position: absolute;
+    z-index: 8;
+    font-size: 0;
+    line-height: 0;
+    width: 0;
+    height: 0;
+}
+
+[data-tip]:after {
+    display: none;
+    content: attr(data-tip);
+    position: absolute;
+    left: 25px;
+    padding: 3px 3px;
+    background: #FDE267;
+    color: #000;
+    z-index: 9;
+    font-size: 0.75em;
+    height: 18px;
+    line-height: 18px;
+    border-radius: 5px;
+    white-space: nowrap;
+    word-wrap: normal;
+}
+
+[data-tip]:hover:before, [data-tip]:hover:after {
+    display: block;
+}
